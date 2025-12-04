@@ -4,24 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edson Castro</title>
+    <title>Edson Castro - Desarrollador Web Freelancer</title>
+    <meta name="description"
+        content="Desarrollador Web Freelancer especializado en automatización de procesos y sistemas a medida para empresas.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
+    <!-- Botón de traducción -->
+    <div class="language-switcher">
+        <button id="lang-toggle" aria-label="Cambiar idioma">
+            <i class="fas fa-language"></i>
+            <span>ES</span>
+        </button>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">Edson<span>Castro</span></a>
                 <div class="nav-links">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#habilidades">Habilidades</a>
-                    <a href="#proyectos">Proyectos</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#inicio" data-en="Home">Inicio</a>
+                    <a href="#habilidades" data-en="Skills">Habilidades</a>
+                    <a href="#proyectos" data-en="Projects">Proyectos</a>
+                    <a href="#educacion" data-en="Education">Educación</a>
+                    <a href="#contacto" data-en="Contact">Contacto</a>
                 </div>
-                <button class="mobile-menu-btn">
+                <button class="mobile-menu-btn" aria-label="Menú de navegación">
                     <i class="fas fa-bars"></i>
                 </button>
             </nav>
@@ -29,294 +41,536 @@
     </header>
 
     <!-- Hero Section -->
-<section id="inicio" class="hero">
-    <div class="container">
-        <div class="hero-content-wrapper" style="display: flex; align-items: center; gap: 60px;">
-            <!-- Imagen a la izquierda -->
-            <div class="hero-image" style="flex: 1;">
-                <img src="foto.webp" class="avatar">
-            </div>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <!-- Imagen a la izquierda con redes sociales -->
+                <div class="hero-image">
+                    <img src="foto.webp" alt="Edson Castro - Desarrollador Web" class="avatar" loading="lazy">
 
-            <!-- Contenido a la derecha -->
-            <div class="hero-content" style="flex: 1;">
-                <h1 class="hero-title"><span>EDSON CASTRO</span></h1>
-                <h2 class="hero-subtitle">Desarrollador Web Backend | Frontend</h2>
-                <p class="hero-description">
-                    El código es mi herramienta, la experiencia del usuario mi objetivo. Diseño y desarrollo
-                    experiencias digitales que conectan personas, marcas y tecnología de forma simple, útil y atractiva.
-                </p>
-                <div class="buttons">
-                    <a href="#contacto" class="btn">Contactar</a>
-                    <a href="#" class="btn btn-outline">Ver CV</a>
+                    <!-- Redes Sociales debajo de la foto -->
+                    <div class="social-links">
+                        <a href="https://github.com/edsonTioo" class="social-link" aria-label="GitHub" target="_blank"
+                            rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ni.linkedin.com/in/edson-josue-castro-zamora-86a5a22a3" class="social-link"
+                            aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:edson7596castro@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contenido a la derecha -->
+                <div class="hero-content">
+                    <h1 class="hero-title"><span data-en="EDSON CASTRO">EDSON CASTRO</span></h1>
+                    <h2 class="hero-subtitle" data-en="Freelance Web Developer">Desarrollador Web Freelancer</h2>
+                    <p class="hero-description"
+                        data-en="Systems engineer with 2 years of experience as a freelancer, developing custom systems focused on business process automation. I create technological solutions that optimize operations for companies of all sizes.">
+                        Ingeniero en sistemas con 2 años de experiencia como freelancer, desarrollando sistemas
+                        a medida enfocados en automatización de procesos empresariales. Creo soluciones tecnológicas
+                        que optimizan operaciones para empresas de todos los tamaños.
+                    </p>
+                    <div class="buttons">
+                        <a href="#contacto" class="btn" data-en="Contact">Contactar</a>
+                        <a href="EDSONCASTRO-CV.pdf" class="btn btn-outline" download="EDSONCASTRO-CV.pdf"
+                            data-en="Download CV">
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="habilidades" class="section">
-    <div class="container">
-        <h2 class="section-title">Habilidades</h2>
+    <!-- Skills Section -->
+    <section id="habilidades" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Technical Skills"> Tecnologías</h2>
 
-        <div class="skills-group">
-
-            <!-- ===================== -->
-            <!-- FRONTEND -->
-            <!-- ===================== -->
-            <h3 class="group-title">Frontend</h3>
-            <div class="skills-container">
-
-                <div class="skill-card" data-color="#E44D26">
-                    <i class="fab fa-html5 skill-icon"></i>
-                    <h3>HTML</h3>
+            <!-- Grid compacta de habilidades -->
+            <div class="compact-skills">
+                <!-- Frontend Skills -->
+                <div class="skill-icon-compact" data-tooltip="HTML5">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="JavaScript">
+                    <i class="fab fa-js"></i>
+                    <span>JS</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="Vue.js">
+                    <i class="fab fa-vuejs"></i>
+                    <span>Vue</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="React">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="Bootstrap">
+                    <i class="fab fa-bootstrap"></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="jQuery">
+                    <i class="fab fa-jsfiddle"></i>
+                    <span>jQuery</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="TailwindCSS">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>Tailwind</span>
                 </div>
 
-                <div class="skill-card" data-color="#1572B6">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <h3>CSS</h3>
+                <!-- Backend & Database Skills -->
+                <div class="skill-icon-compact" data-tooltip="PHP">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="Python">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="Laravel">
+                    <i class="fab fa-laravel"></i>
+                    <span>Laravel</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip=".NET">
+                    <i class="fas fa-code"></i>
+                    <span>.NET</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="C#">
+                    <i class="fas fa-copyright"></i>
+                    <span>C#</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="Node.js">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="MySQL">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="PostgreSQL">
+                    <i class="fas fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="MongoDB">
+                    <i class="fas fa-leaf"></i>
+                    <span>MongoDB</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="SQL Server">
+                    <i class="fas fa-database"></i>
+                    <span>SQL Server</span>
                 </div>
 
-                <div class="skill-card" data-color="#F7DF1E">
-                    <i class="fab fa-js skill-icon"></i>
-                    <h3>JavaScript</h3>
+                <!-- Tools & Others -->
+                <div class="skill-icon-compact" data-tooltip="Git">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
                 </div>
-
-                <div class="skill-card" data-color="#4FC08D">
-                    <i class="fab fa-vuejs skill-icon"></i>
-                    <h3>Vue</h3>
+                <div class="skill-icon-compact" data-tooltip="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
                 </div>
-
-                <div class="skill-card" data-color="#61DAFB">
-                    <i class="fab fa-react skill-icon"></i>
-                    <h3>React</h3>
+                <div class="skill-icon-compact" data-tooltip="React Native">
+                    <i class="fab fa-react"></i>
+                    <span>React Native</span>
                 </div>
-
-                <div class="skill-card" data-color="#7952B3">
-                    <i class="fab fa-bootstrap skill-icon"></i>
-                    <h3>Bootstrap</h3>
+                <div class="skill-icon-compact" data-tooltip="Power BI">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Power BI</span>
                 </div>
-
-                <div class="skill-card" data-color="#0769AD">
-                    <i class="fab fa-jsfiddle skill-icon"></i>
-                    <h3>jQuery</h3>
+                <div class="skill-icon-compact" data-tooltip="Entity Framework">
+                    <i class="fas fa-layer-group"></i>
+                    <span>EF</span>
                 </div>
-
-                <div class="skill-card" data-color="#38BDF8">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <h3>TailwindCSS</h3>
+                <div class="skill-icon-compact" data-tooltip="Jupyter Notebook">
+                    <i class="fas fa-book-open"></i>
+                    <span>Jupyter</span>
                 </div>
-
+                <div class="skill-icon-compact" data-tooltip="CI/CD">
+                    <i class="fas fa-cogs"></i>
+                    <span>CI/CD</span>
+                </div>
+                <div class="skill-icon-compact" data-tooltip="Docker">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                </div>
             </div>
 
-            <!-- ===================== -->
-            <!-- BACKEND / DB -->
-            <!-- ===================== -->
-            <h3 class="group-title">Backend & Bases de Datos</h3>
-            <div class="skills-container">
-
-                <div class="skill-card" data-color="#336791">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h3>PostgreSQL</h3>
+            <!-- Categorías para contexto -->
+            <div class="skills-categories">
+                <div class="category">
+                    <h3 data-en="Frontend">Frontend</h3>
+                    <p data-en="HTML, CSS, JavaScript, Vue, React, Bootstrap, jQuery, TailwindCSS">HTML, CSS,
+                        JavaScript, Vue, React, Bootstrap, jQuery, TailwindCSS</p>
                 </div>
-
-                <div class="skill-card" data-color="#4479A1">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h3>MySQL</h3>
+                <div class="category">
+                    <h3 data-en="Backend">Backend</h3>
+                    <p data-en="PHP, Laravel, C#, .NET, Python, Node.js">PHP, Laravel, C#, .NET, Python, Node.js</p>
                 </div>
-
-                <div class="skill-card" data-color="#13AA52">
-                    <i class="fas fa-leaf skill-icon"></i>
-                    <h3>MongoDB</h3>
+                <div class="category">
+                    <h3 data-en="Databases">Bases de Datos</h3>
+                    <p data-en="PostgreSQL, MySQL, MongoDB, SQL Server">PostgreSQL, MySQL, MongoDB, SQL Server</p>
                 </div>
-
-                <div class="skill-card" data-color="#3ECF8E">
-                    <i class="fas fa-server skill-icon"></i>
-                    <h3>Supabase</h3>
+                <div class="category">
+                    <h3 data-en="Tools">Herramientas</h3>
+                    <p data-en="Git, GitHub, CI/CD, Power BI, Jupyter, Docker">Git, GitHub, CI/CD, Power BI, Jupyter,
+                        Docker</p>
                 </div>
-
-                <div class="skill-card" data-color="#2050FF">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h3>SQL Server</h3>
-                </div>
-
             </div>
-
-            <!-- ===================== -->
-            <!-- FRAMEWORKS -->
-            <!-- ===================== -->
-            <h3 class="group-title">Frameworks & Entornos</h3>
-            <div class="skills-container">
-
-                <div class="skill-card" data-color="#512BD4">
-                    <i class="fas fa-code skill-icon"></i>
-                    <h3>ASP.NET</h3>
-                </div>
-
-                <div class="skill-card" data-color="#68217A">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h3>Entity Framework</h3>
-                </div>
-
-                <div class="skill-card" data-color="#F05340">
-                    <i class="fab fa-laravel skill-icon"></i>
-                    <h3>Laravel</h3>
-                </div>
-
-                <div class="skill-card" data-color="#512BD4">
-                    <i class="fas fa-mobile-alt skill-icon"></i>
-                    <h3>.NET MAUI</h3>
-                </div>
-
-                <div class="skill-card" data-color="#61DAFB">
-                    <i class="fab fa-react skill-icon"></i>
-                    <h3>React Native</h3>
-                </div>
-
-            </div>
-
-            <!-- ===================== -->
-            <!-- LENGUAJES -->
-            <!-- ===================== -->
-            <h3 class="group-title">Lenguajes de Programación</h3>
-            <div class="skills-container">
-
-                <div class="skill-card" data-color="#4F5B93">
-                    <i class="fab fa-php skill-icon"></i>
-                    <h3>PHP</h3>
-                </div>
-
-                <div class="skill-card" data-color="#9B4F96">
-                    <i class="fas fa-code skill-icon"></i>
-                    <h3>C#</h3>
-                </div>
-
-                <div class="skill-card" data-color="#F7DF1E">
-                    <i class="fab fa-python skill-icon"></i>
-                    <h3>Python</h3>
-                </div>
-
-            </div>
-
-            <!-- ===================== -->
-            <!-- ANÁLISIS DE DATOS -->
-            <!-- ===================== -->
-            <h3 class="group-title">Análisis de Datos</h3>
-            <div class="skills-container">
-
-                <div class="skill-card" data-color="#F7DF1E">
-                    <i class="fab fa-python skill-icon"></i>
-                    <h3>Python</h3>
-                </div>
-
-                <div class="skill-card" data-color="#DA5B0B">
-                    <i class="fas fa-book-open skill-icon"></i>
-                    <h3>Jupyter Notebook</h3>
-                </div>
-
-                <div class="skill-card" data-color="#F2C811">
-                    <i class="fas fa-chart-bar skill-icon"></i>
-                    <h3>Power BI</h3>
-                </div>
-
-            </div>
-
-            <!-- ===================== -->
-            <!-- HERRAMIENTAS -->
-            <!-- ===================== -->
-            <h3 class="group-title">Herramientas</h3>
-            <div class="skills-container">
-
-                <div class="skill-card" data-color="#F05033">
-                    <i class="fab fa-git-alt skill-icon"></i>
-                    <h3>Git</h3>
-                </div>
-
-                <div class="skill-card" data-color="#181717">
-                    <i class="fab fa-github skill-icon"></i>
-                    <h3>GitHub</h3>
-                </div>
-
-                <div class="skill-card" data-color="#0062FF">
-                    <i class="fas fa-cogs skill-icon"></i>
-                    <h3>CI/CD</h3>
-                </div>
-
-                <div class="skill-card" data-color="#FF3E00">
-                    <i class="fas fa-shield-alt skill-icon"></i>
-                    <h3>Pentesting Básico</h3>
-                </div>
-
-            </div>
-
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- Projects Section -->
-    <section id="proyectos" class="section" style="background-color: #f8fafc;">
+    <section id="proyectos" class="section">
         <div class="container">
-            <h2 class="section-title">Proyectos</h2>
+            <h2 class="section-title" data-en="Freelance Projects">Proyectos como Freelancer </h2>
+            <p class="section-subtitle" data-en="Systems developed for clients to optimize their business processes">
+                Sistemas desarrollados para clientes para optimizar sus procesos empresariales</p>
+
             <div class="projects-container">
-                <!-- Proyecto 1 -->
+                <!-- Proyecto 1 - SMARNET -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
-                        alt="ROBBUILD - ONG" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">ROBBUILD - ONG</h3>
-                        <p class="project-description">
-                            Proyecto desarrollado para la organización Robbuild en Lima, donde integré un sistema de
-                            donaciones con PayPal, creando una plataforma moderna, clara y orientada a generar
-                            confianza.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Astro</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Zod</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">TailwindCSS</span>
+                    <div class="project-header">
+                        <h3 class="project-title">SMARNET</h3>
+                        <span class="project-client" data-en="Client: Sublimation Materials Business">Cliente: Negocio
+                            de Materiales de Sublimación</span>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1674&q=80"
+                            alt="SMARNET - Sistema de Gestión" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-status" data-en="In Production">Desplegado</span>
                         </div>
-                        <a href="#" class="btn">Ver más detalles</a>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description"
+                            data-en="Complete management system for wholesale business including inventory, billing, financial reports, and mass email marketing. Developed as a freelancer to automate all operations.">
+                            Sistema completo de gestión para negocio mayorista incluyendo inventario, facturación,
+                            reportes financieros y email marketing masivo. Desarrollado como freelancer para automatizar
+                            todas las operaciones.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Inventory Management">Gestión de Inventario</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Electronic Billing">Facturación Electrónica</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Financial Reports">Reportes Financieros</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Mass Email Marketing">Email Marketing Masivo</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">jQuery</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Email Marketing</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn-demo" data-en="View Demo">Ver Demo</button>
+                            <a href="#contacto" class="btn" data-en="Similar Project">Proyecto Similar</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Proyecto 2 -->
+                <!-- Proyecto 2 - Laboratorio -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-                        alt="E-commerce Moderno" class="project-image">
+                    <div class="project-header">
+                        <h3 class="project-title">Laboratorio Sangre de Cristo</h3>
+                        <span class="project-client" data-en="Client: Clinical Laboratory">Cliente: Laboratorio
+                            Clínico</span>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+                            alt="Laboratorio Clínico" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-status" data-en="Cross-platform">Desplegado</span>
+                        </div>
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">E-commerce Moderno</h3>
-                        <p class="project-description">
-                            Plataforma de comercio electrónico con carrito de compras, pasarela de pago y panel de
-                            administración. Desarrollado con React, Node.js y PostgreSQL.
+                        <p class="project-description"
+                            data-en="Multi-platform system for clinical laboratory management including patient registration, appointments, exam results, and billing. Developed as a complete solution for medical processes.">
+                            Sistema multiplataforma para gestión de laboratorio clínico incluyendo registro de
+                            pacientes,
+                            citas, resultados de exámenes y facturación. Desarrollado como solución completa para
+                            procesos médicos.
                         </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Patient Management">Gestión de Pacientes</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Appointment System">Sistema de Citas</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Exam Results">Resultados de Exámenes</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Analytical Dashboard">Panel Analítico</span>
+                            </div>
+                        </div>
                         <div class="project-tags">
-                            <span class="tag">React</span>
+                            <span class="tag">React Native</span>
                             <span class="tag">Node.js</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">TypeScript</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">ASP.Net Core</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">MySQL</span>
                         </div>
-                        <a href="#" class="btn">Ver más detalles</a>
+                        <div class="project-buttons">
+                            <button class="btn-demo" data-en="View Demo">Ver Demo</button>
+                            <a href="#contacto" class="btn" data-en="Similar Project">Proyecto Similar</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Proyecto 3 -->
+                <!-- Proyecto 3 - Salón de Belleza -->
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1715&q=80"
-                        alt="Dashboard Analytics" class="project-image">
-                    <div class="project-content">
-                        <h3 class="project-title">Dashboard Analytics</h3>
-                        <p class="project-description">
-                            Panel de control interactivo para visualización de datos con gráficos en tiempo real.
-                            Incluye autenticación, permisos por roles y exportación de reportes.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">TanStack Query</span>
-                            <span class="tag">Zustand</span>
-                            <span class="tag">Supabase</span>
+                    <div class="project-header">
+                        <h3 class="project-title">SALON FER Y BOUTIQUE</h3>
+                        <span class="project-client" data-en="Client: Beauty Salon & Boutique">Cliente: Salón de Belleza
+                            y Boutique</span>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1715&q=80"
+                            alt="Salón de Belleza" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-status" data-en="In Production">Desplegado</span>
                         </div>
-                        <a href="#" class="btn">Ver más detalles</a>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description"
+                            data-en="Integrated management system for beauty salon and boutique with inventory control, purchases, sales, and electronic billing. Developed to optimize daily operations.">
+                            Sistema integrado de gestión para salón de belleza y boutique con control de inventario,
+                            compras, ventas y facturación electrónica. Desarrollado para optimizar operaciones diarias.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Inventory Control">Control de Inventario</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Sales Management">Gestión de Ventas</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Supplier Management">Gestión de Proveedores</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Financial Reports">Reportes Financieros</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">TailwindCSS</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn-demo" data-en="View Demo">Ver Demo</button>
+                            <a href="#contacto" class="btn" data-en="Similar Project">Proyecto Similar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 - Ferretería -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Ferretería Don Jaime</h3>
+                        <span class="project-client" data-en="Client: Hardware Store">Cliente: Ferretería</span>
+                    </div>
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80"
+                            alt="Ferretería" class="project-image" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-status" data-en="Completed">Desplegado</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description"
+                            data-en="Management system for hardware store with inventory control, purchases, sales, customers, suppliers and automated financial reports. Developed to digitize all operations.">
+                            Sistema de gestión para ferretería con control de inventario, compras, ventas, clientes,
+                            proveedores y reportes financieros automatizados. Desarrollado para digitalizar todas las
+                            operaciones.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Product Catalog">Catálogo de Productos</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Customer Management">Gestión de Clientes</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Supplier Management">Gestión de Proveedores</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span data-en="Automated Reports">Reportes Automatizados</span>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">ASP.NET</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Entity Framework</span>
+                            <span class="tag">SQL Server</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn-demo" data-en="View Demo">Ver Demo</button>
+                            <a href="#contacto" class="btn" data-en="Similar Project">Proyecto Similar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación Section -->
+    <section id="educacion" class="section education-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Education & Certifications">Educación y Certificaciones</h2>
+
+            <div class="education-cards">
+                <!-- Educación 1 -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-en="Systems Engineering">Ingeniería en Sistemas</h3>
+                        <p class="education-institution"
+                            data-en="National Autonomous University of Nicaragua (UNAN-Managua)">Universidad Nacional
+                            Autónoma de Nicaragua (UNAN-Managua)</p>
+                        <p class="education-year">2025</p>
+                        <p class="education-details"
+                            data-en="Specialization in software development and technology project management.">
+                            Especialización en desarrollo de software y gestión de proyectos tecnológicos.</p>
+                    </div>
+                </div>
+
+                <!-- Educación 2 -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-en="Technical English">Inglés Técnico</h3>
+                        <p class="education-institution" data-en="National University of José Clemente Paz (UNPAZ)">
+                            Universidad Nacional de José Clemente Paz (UNPAZ)</p>
+                        <p class="education-year">2024</p>
+                        <p class="education-details"
+                            data-en="Certification in technical English for software development and professional communication.">
+                            Certificación en inglés técnico para desarrollo de software y comunicación profesional.</p>
+                    </div>
+                </div>
+
+                <!-- Educación 3 -->
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-en="Software Development Technician">Técnico en Desarrollo de Software</h3>
+                        <p class="education-institution" data-en="Intec Monseñor Lezcano Branch">Intec Sucursal Monseñor
+                            Lezcano</p>
+                        <p class="education-year">2025</p>
+                        <p class="education-details"
+                            data-en="Technical training specialized in programming and application development.">
+                            Formación técnica especializada en programación y desarrollo de aplicaciones.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reconocimientos -->
+            <div class="awards-section">
+                <h3 class="awards-title" data-en="Academic Awards & Recognitions">Reconocimientos Académicos</h3>
+
+                <div class="awards-container">
+                    <!-- Premio 1 -->
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="award-content">
+                            <h4 data-en="First Place - XLI University Scientific Development Conference">Primer Lugar -
+                                XLI Jornada Universitaria de Desarrollo Científico</h4>
+                            <p class="award-year">2023</p>
+                            <p
+                                data-en="Category: Scientific Article - Thematic Axis: Exact Sciences, Engineering, Industry and Construction - UNAN-MANAGUA FAREM MATAGALPA">
+                                Categoría: Artículo Científico - Eje temático: Ciencias Exactas, Ingeniería, Industria y
+                                Construcción - UNAN-MANAGUA FAREM MATAGALPA</p>
+                        </div>
+                    </div>
+
+                    <!-- Premio 2 -->
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="award-content">
+                            <h4 data-en="Academic Excellence Diploma">Diploma de Excelencia Académica</h4>
+                            <p class="award-year">2023</p>
+                            <p
+                                data-en="Recognition as distinguished student of Systems Engineering for maximum grade in JUDC">
+                                Reconocimiento como estudiante distinguido de Ingeniería en Sistemas por calificación
+                                máxima en JUDC</p>
+                        </div>
+                    </div>
+
+                    <!-- Premio 3 -->
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="award-content">
+                            <h4 data-en="First Place - Mobile Applications Contest">Primer Lugar - Concurso de
+                                Aplicaciones Móviles</h4>
+                            <p class="award-year">2024</p>
+                            <p data-en="IV Technological Innovation Fair - UNAN-MANAGUA FAREM MATAGALPA">IV Feria de
+                                Innovación Tecnológica - UNAN-MANAGUA FAREM MATAGALPA</p>
+                        </div>
+                    </div>
+
+                    <!-- Premio 4 -->
+                    <div class="award-card">
+                        <div class="award-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="award-content">
+                            <h4 data-en="First Place - Web Systems Contest">Primer Lugar - Concurso de Sistemas Web</h4>
+                            <p class="award-year">2024</p>
+                            <p data-en="V Technological Innovation Fair - UNAN-MANAGUA FAREM MATAGALPA">V Feria de
+                                Innovación Tecnológica - UNAN-MANAGUA FAREM MATAGALPA</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -326,24 +580,27 @@
     <!-- Contact Section -->
     <section id="contacto" class="contact-section">
         <div class="container">
-            <h2 class="contact-title">Trabajemos Juntos</h2>
-            <p class="contact-description">
+            <h2 class="contact-title" data-en="Let's Work Together">Trabajemos Juntos</h2>
+            <p class="contact-description"
+                data-en="Do you have a project in mind? Don't hesitate to contact me. I'm always open to discuss new opportunities and collaborations.">
                 ¿Tienes un proyecto en mente? No dudes en contactarme. Estoy siempre abierto a discutir nuevas
                 oportunidades y colaboraciones.
             </p>
-            <a href="mailto:michael@example.com" class="btn">Enviar mensaje</a>
+            <a href="mailto:edson7596castro@gmail.com" class="btn" data-en="Send Message">Enviar mensaje</a>
 
             <div class="contact-links">
-                <a href="#" class="contact-link">
+                <a href="https://github.com/edsonTioo" class="contact-link" aria-label="GitHub" target="_blank"
+                    rel="noopener">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="#" class="contact-link">
+                <a href="https://ni.linkedin.com/in/edson-josue-castro-zamora-86a5a22a3" class="contact-link"
+                    aria-label="LinkedIn" target="_blank" rel="noopener">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" class="contact-link">
-                    <i class="fab fa-twitter"></i>
+                <a href="#" class="contact-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="contact-link">
+                <a href="mailto:edson7596castro@gmail.com" class="contact-link" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -353,12 +610,14 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2023 Michael Acuache. Todos los derechos reservados.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">Desarrollado con pasión por la tecnología y el diseño.</p>
+            <p>&copy; <span id="current-year"></span> Edson Castro. <span data-en="All rights reserved.">Todos los
+                    derechos reservados.</span></p>
+            <p class="footer-sub" data-en="Developed with passion for technology and design.">Desarrollado con pasión
+                por la tecnología y el diseño.</p>
         </div>
     </footer>
-   <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
